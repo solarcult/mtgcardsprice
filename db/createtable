@@ -1,0 +1,23 @@
+-- Table: cardsprice
+
+-- DROP TABLE cardsprice;
+
+CREATE TABLE cardsprice
+(
+  id bigserial NOT NULL,
+  name text,
+  mset text,
+  price double precision,
+  fetchdate timestamp with time zone,
+  year integer,
+  month integer,
+  day integer,
+  week integer,
+  hour integer,
+  minute integer
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE cardsprice
+  OWNER TO postgres;

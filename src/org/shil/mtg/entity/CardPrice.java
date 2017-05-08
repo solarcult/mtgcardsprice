@@ -1,13 +1,12 @@
 package org.shil.mtg.entity;
 
 import java.util.Calendar;
-import java.util.Date;
 
 public class CardPrice {
 	
 	private String set;
 	private String name;
-	private Date fetchDate;
+	private Calendar fetchDate;
 	private double price;
 	private int year;
 	private int month;
@@ -19,12 +18,12 @@ public class CardPrice {
 	public CardPrice(String set, String name, Calendar fetchCalendar,double price){
 		this.set = set;
 		this.name = name;
-		this.fetchDate = fetchCalendar.getTime();
+		this.fetchDate = fetchCalendar;
 		this.price = price;
 		this.year = fetchCalendar.get(Calendar.YEAR);
 		this.month = fetchCalendar.get(Calendar.MONTH)+1;
 		this.day = fetchCalendar.get(Calendar.DAY_OF_MONTH);
-		this.week = fetchCalendar.get(Calendar.WEEK_OF_MONTH);
+		this.week = fetchCalendar.get(Calendar.DAY_OF_WEEK)-1;
 		this.hour = fetchCalendar.get(Calendar.HOUR_OF_DAY);
 		this.minute = fetchCalendar.get(Calendar.MINUTE);
 	}
@@ -37,7 +36,7 @@ public class CardPrice {
 		return name;
 	}
 
-	public Date getFetchDate() {
+	public Calendar getFetchDate() {
 		return fetchDate;
 	}
 
