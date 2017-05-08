@@ -71,9 +71,7 @@ public class CardPrice {
 
 	@Override
 	public String toString() {
-		return "CardPrice [set=" + set + ", name=" + name + ", fetchDate=" + fetchDate + ", price=" + price + ", year="
-				+ year + ", month=" + month + ", day=" + day + ", week=" + week + ", hour=" + hour + ", minute="
-				+ minute + "]";
+		return "CardPrice [set=" + set + ", name=" + name + ", price=" + price + "]";
 	}
 	
 }
