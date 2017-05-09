@@ -6,11 +6,15 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 
 import org.shil.mtg.entity.CardPrice;
-
+/**
+ * 
+ * @author LiangJingJing
+ * 
+ * 2017-05-09 21:52
+ */
 public class CardPriceDaoImpl {
 
-	public static void insertCardPrice(CardPrice cardprice){
-		Connection connection = DataBaseManager.getConnection();
+	public static void insertCardPrice(Connection connection, CardPrice cardprice){
 
 		PreparedStatement preparedStatement = null;
 
@@ -18,13 +22,11 @@ public class CardPriceDaoImpl {
 
 			preparedStatement = connection.prepareStatement(
 
-				"insert into cardsprice(year,month,day,hour,minute,week,fetchdate,name,mset,price)"
+				"insert into cardsprice(year,month,day,hour,minute,week,fetchdate,name,mset,sellprice,buyprice,site)"
 
-				+ " values(?,?,?,?,?,?,?,?,?,?)"
+				+ " values(?,?,?,?,?,?,?,?,?,?,?,?)"
 
 			);
-
-			
 
 			preparedStatement.setInt(1, cardprice.getYear());
 
@@ -42,14 +44,15 @@ public class CardPriceDaoImpl {
 
 			preparedStatement.setString(8, cardprice.getName());
 
-			preparedStatement.setString(9, cardprice.getSet());
+			preparedStatement.setString(9, cardprice.getMset());
 
-			preparedStatement.setDouble(10, cardprice.getPrice());
-
-
-			preparedStatement.executeUpdate();
-
+			preparedStatement.setDouble(10, cardprice.getSellprice());
 			
+			preparedStatement.setDouble(11, cardprice.getBuyprice());
+			
+			preparedStatement.setString(12, cardprice.getSite());
+			
+			preparedStatement.executeUpdate();
 
 		}catch(Exception e){
 

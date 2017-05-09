@@ -2,7 +2,47 @@ package org.shil.mtg;
 
 public class CardsList {
 	
-	public static String[] getCardsList(){
+	public static String[] getCardhoarderCardsList(){
+		
+		String[] cardslist = {
+				
+				//SOI
+				"https://www.cardhoarder.com/cards/59842",
+				"https://www.cardhoarder.com/cards/59920",
+				
+				//KLD
+				"https://www.cardhoarder.com/cards/61855",
+				"https://www.cardhoarder.com/cards/61849",
+				"https://www.cardhoarder.com/cards/62019",
+				"https://www.cardhoarder.com/cards/61589",
+				"https://www.cardhoarder.com/cards/61575",
+				"https://www.cardhoarder.com/cards/61963",
+				"https://www.cardhoarder.com/cards/62029",
+				"https://www.cardhoarder.com/cards/62017",
+				"https://www.cardhoarder.com/cards/61775",
+				"https://www.cardhoarder.com/cards/61879",
+				"https://www.cardhoarder.com/cards/62085",
+				"https://www.cardhoarder.com/cards/61857",
+				"https://www.cardhoarder.com/cards/62037",
+				"https://www.cardhoarder.com/cards/62021",
+				"https://www.cardhoarder.com/cards/61957",
+				
+				//AER
+				"https://www.cardhoarder.com/cards/62565",
+				"https://www.cardhoarder.com/cards/62895",
+				"https://www.cardhoarder.com/cards/62557",
+				"https://www.cardhoarder.com/cards/62829",
+				"https://www.cardhoarder.com/cards/62745",
+				"https://www.cardhoarder.com/cards/62803",
+				
+				//AKH
+				"https://www.cardhoarder.com/cards/63630",
+			};
+		
+		return cardslist;
+	}
+	
+	public static String[] getMtggoldfishCardsList(){
 		
 		String[] cardslist = {
 				

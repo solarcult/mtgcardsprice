@@ -7,14 +7,16 @@ CREATE TABLE cardsprice
   id bigserial NOT NULL,
   name text,
   mset text,
-  price double precision,
+  sellprice double precision,
   fetchdate timestamp with time zone,
   year integer,
   month integer,
   day integer,
   week integer,
   hour integer,
-  minute integer
+  minute integer,
+  buyprice double precision,
+  site text
 )
 WITH (
   OIDS=FALSE

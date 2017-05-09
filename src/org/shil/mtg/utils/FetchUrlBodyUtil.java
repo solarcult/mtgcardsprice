@@ -1,7 +1,6 @@
 package org.shil.mtg.utils;
 
 import java.io.IOException;
-import java.util.Calendar;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -10,25 +9,19 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.util.EntityUtils;
-import org.shil.mtg.entity.CardPrice;
 
-public class FetchCardPriceUtil {
-	
-	public static String ONLINE_PRICE_START = "<div class='price-box-price'>";
-	public static String ONLINE_PRICE_STOP = "</div>";
-	public static String TITLE_START = "<title>";
-	public static String TITLE_END = "</title>";
-	public static String BEFORE_NAME = ","; 
-	public static String SET_END = ")";
-	
-	public static CardPrice fetchCardPrice(String cardurl){
-		CardPrice cardPrice = null;
+public class FetchUrlBodyUtil {
+
+	public static String fetchUrlBody(String cardurl){
+		String responseBody = null;
 		CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
         	
         	HttpGet httpget = new HttpGet(cardurl);
-
+        	httpget.addHeader(new BasicHeader("Cookie","CHSESSION=ogs0lhsem07g0a5tkriplthm21; visid_incap_839682=Y2evWq9iQ/CnqNS44KGhUwJph1gAAAAAQUIPAAAAAAAYEQkvAfcEm4qd7eZwOSYl; ajs_user_id=null; ajs_group_id=null; ajs_anonymous_id=%22c3a40103-d7a0-4019-b654-5d22756afa5f%22; _ga=GA1.2.1509432278.1485269260; intercom-id-jv6shdwn=920223f0-e140-4bfe-86a0-052aafec36e2; App[AnonymousId]=Q2FrZQ%3D%3D.pua3hG9eoNdgt6LUv3cW%2FiJsM3uDpdeVzhi8y9J%2B9CIkJE6unwnkHS3HKDnT7LDP55LX4q3qkHwzsRs92SFjqfajGnXW48jTosQWH6cOf7o2Vh5N7t1PSr00Lj%2F3CH5DXnE%3D; _gid=GA1.2.14003846.1494347141; incap_ses_261_839682=n0b3RcMVjCFmNDu2BESfA4veEVkAAAAASwfcTtr7L/YC8YjVrD8zJA==; incap_ses_434_839682=eqIcZ245lFJUCc8TP+EFBrbrEVkAAAAAEojk2w6NJqMwBxoZ8aEchw==; _gat=1"));
+        	
 //            System.out.println("Executing request " + httpget.getRequestLine());
 
             // Create a custom response handler
@@ -47,28 +40,10 @@ public class FetchCardPriceUtil {
                     }
                 }
             };
-            String responseBody = httpclient.execute(httpget, responseHandler);
+            
+            responseBody = httpclient.execute(httpget, responseHandler);
 //            System.out.println("----------------------------------------");
 //            System.out.println(responseBody);
-            
-            int titleStart = responseBody.indexOf(TITLE_START);
-            int titleContentStart = titleStart + TITLE_START.length();
-            int titleEnd = responseBody.indexOf(TITLE_END);
-            String title = responseBody.substring(titleContentStart,titleEnd);
-            String name = title.substring(0,title.indexOf(BEFORE_NAME));
-            String set = title.substring(title.indexOf(BEFORE_NAME)+2, title.indexOf(SET_END)+1);
-            Calendar now = Calendar.getInstance();
-            
-            int start = responseBody.indexOf(ONLINE_PRICE_START);
-            int price_start = start+ONLINE_PRICE_START.length();
-            int price_stop = responseBody.indexOf(ONLINE_PRICE_STOP,price_start);
-            String online_price = responseBody.substring(price_start, price_stop);
-//            System.out.println(Double.valueOf(online_price));
-          
-            cardPrice = new CardPrice(set,name,now,Double.parseDouble(online_price));
-            
-//            System.out.println(cardPrice);
-            
             
         }catch(Exception e){
         	e.printStackTrace();
@@ -81,10 +56,6 @@ public class FetchCardPriceUtil {
 			}
         }
         
-        return cardPrice;
-	}
-
-	public static void main(String[] args){
-		System.out.println(fetchCardPrice("https://www.mtggoldfish.com/price/Aether+Revolt/Metallic+Mimic#online"));
+        return responseBody;
 	}
 }
