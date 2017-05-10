@@ -24,7 +24,7 @@ public class CardhoarderFetchTimer {
 //						System.out.println(cp);
 						CardPriceDaoImpl.insertCardPrice(PostgresqlDataBaseManager.getConnection(),cp);
 //						CardPriceDaoImpl.insertCardPrice(MysqlDataBaseManager.getConnection(),cp);
-						Thread.sleep(949);
+						Thread.sleep(1042);
 					}catch(Exception e){
 						e.printStackTrace();
 					}
