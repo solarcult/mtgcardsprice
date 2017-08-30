@@ -1,5 +1,6 @@
 package org.shil.mtg;
 
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,7 +29,8 @@ public class CardhoarderFetchTimer {
 					}catch(Exception e){
 						e.printStackTrace();
 					}
-				}	
+				}
+				System.out.println(Calendar.getInstance().getTime()+" cardhoarder job is done.");
 			}
 		};
 		

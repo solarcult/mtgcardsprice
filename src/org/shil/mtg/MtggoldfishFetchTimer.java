@@ -1,5 +1,6 @@
 package org.shil.mtg;
 
+import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,14 +22,15 @@ public class MtggoldfishFetchTimer {
 				for(String url : urls){
 					try{
 						CardPrice cp = AnalyzeMtggoldfishCardPriceUtil.fetchCardPrice(url);
-//						System.out.println(cp);
+						System.out.println(cp);
 						CardPriceDaoImpl.insertCardPrice(PostgresqlDataBaseManager.getConnection(),cp);
 //						CardPriceDaoImpl.insertCardPrice(MysqlDataBaseManager.getConnection(),cp);
 						Thread.sleep(1042);
 					}catch(Exception e){
 						e.printStackTrace();
 					}
-				}	
+				}
+				System.out.println(Calendar.getInstance().getTime()+" mtggoldfish job is done.");
 			}
 		};
 		

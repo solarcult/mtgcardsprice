@@ -49,16 +49,21 @@ public class CardsList {
 				//SOI
 				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Fortified+Village#online",
 				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Choked+Estuary#online",
+				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Foreboding+Ruins#online",
+				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Sigarda+Herons+Grace#online",
+				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Arlinn+Kord#online",
+				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Mindwrack+Demon#online",
+				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Odric+Lunarch+Marshal#online",
+				
+				//EM
+				"https://www.mtggoldfish.com/price/Eldritch+Moon/Voldaren+Pariah#online",
+				"https://www.mtggoldfish.com/price/Eldritch+Moon/Thalia+Heretic+Cathar#online",
 				
 				//KLD
 				"https://www.mtggoldfish.com/price/Kaladesh/Inspiring+Vantage#online",
-				"https://www.mtggoldfish.com/price/Kaladesh/Blooming+Marsh#online",
-				"https://www.mtggoldfish.com/price/Kaladesh/Bristling+Hydra#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Nissa+Vital+Force#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Dovin+Baan#online",
-				"https://www.mtggoldfish.com/price/Kaladesh/Lost+Legacy#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Depala+Pilot+Exemplar#online",
-				"https://www.mtggoldfish.com/price/Kaladesh/Verdurous+Gearhulk#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Rashmi+Eternities+Crafter#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Toolcraft+Exemplar#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Electrostatic+Pummeler#online",
@@ -66,17 +71,27 @@ public class CardsList {
 				"https://www.mtggoldfish.com/price/Kaladesh/Kambal+Consul+of+Allocation#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Oviya+Pashiri+Sage+Lifecrafter#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Gonti+Lord+of+Luxury#online",
+				"https://www.mtggoldfish.com/price/Kaladesh/Pia+Nalaar#online",
+				"https://www.mtggoldfish.com/price/Kaladesh/Paradoxical+Outcome#online",
+				"https://www.mtggoldfish.com/price/Kaladesh/Cataclysmic+Gearhulk#online",
 				
 				//AER
-				"https://www.mtggoldfish.com/price/Aether+Revolt/Metallic+Mimic#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Hope+of+Ghirapur#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Tezzeret+the+Schemer#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Oath+of+Ajani#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Kari+Zev+Skyship+Raider#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Heroic+Intervention#online",
+				"https://www.mtggoldfish.com/price/Aether+Revolt/Quicksmith+Rebel#online",
+				"https://www.mtggoldfish.com/price/Aether+Revolt/Pias+Revolution#online",
 				
 				//AKH
-				"https://www.mtggoldfish.com/price/Amonkhet/Gideon+of+the+Trials",
+				"https://www.mtggoldfish.com/price/Amonkhet/Scattered+Groves",
+				"https://www.mtggoldfish.com/price/Amonkhet/Cascading+Cataracts#online",
+				"https://www.mtggoldfish.com/price/Amonkhet/Canyon+Slough#online",
+				"https://www.mtggoldfish.com/price/Amonkhet/Neheb+the+Worthy#online",
+				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Mirage+Mirror#online",
+				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Samut+the+Tested#online",
+				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Torment+of+Hailfire"
 			};
 		
 		return cardslist;

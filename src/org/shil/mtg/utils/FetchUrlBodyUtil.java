@@ -1,16 +1,20 @@
 package org.shil.mtg.utils;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 public class FetchUrlBodyUtil {
@@ -89,16 +93,27 @@ public class FetchUrlBodyUtil {
         try {
         	
         	HttpGet httpget = new HttpGet(cardurl);
-        	httpget.addHeader(new BasicHeader("Cookie","incap_ses_572_839682=RxSyIEIr/3ityr+9LSfwB/LtFFkAAAAA0QOXji099nPIcfMaJODvtw==; CHSESSION=phrniie8m1e054hbco9e2csk33; visid_incap_839682=Y2evWq9iQ/CnqNS44KGhUwJph1gAAAAAQkIPAAAAAACADgp8AXbBFIqXKAfjUUs6sYsKhlDkdpeE; ajs_user_id=null; ajs_group_id=null; ajs_anonymous_id=%22c3a40103-d7a0-4019-b654-5d22756afa5f%22; _ga=GA1.2.1509432278.1485269260; intercom-id-jv6shdwn=920223f0-e140-4bfe-86a0-052aafec36e2; App[AnonymousId]=Q2FrZQ%3D%3D.pua3hG9eoNdgt6LUv3cW%2FiJsM3uDpdeVzhi8y9J%2B9CIkJE6unwnkHS3HKDnT7LDP55LX4q3qkHwzsRs92SFjqfajGnXW48jTosQWH6cOf7o2Vh5N7t1PSr00Lj%2F3CH5DXnE%3D; _gid=GA1.2.1724015756.1494465040"));
+        	httpget.addHeader(new BasicHeader("Cookie","CHSESSION=j42o4rn6057oi449bo5ir77ns2; visid_incap_839682=Y2evWq9iQ/CnqNS44KGhUwJph1gAAAAAQkIPAAAAAACADgp8AXbBFIqXKAfjUUs6sYsKhlDkdpeE; ajs_user_id=null; ajs_group_id=null; ajs_anonymous_id=%22c3a40103-d7a0-4019-b654-5d22756afa5f%22; _ga=GA1.2.1509432278.1485269260; intercom-id-jv6shdwn=920223f0-e140-4bfe-86a0-052aafec36e2; App[AnonymousId]=Q2FrZQ%3D%3D.pua3hG9eoNdgt6LUv3cW%2FiJsM3uDpdeVzhi8y9J%2B9CIkJE6unwnkHS3HKDnT7LDP55LX4q3qkHwzsRs92SFjqfajGnXW48jTosQWH6cOf7o2Vh5N7t1PSr00Lj%2F3CH5DXnE%3D; App[Search]=Q2FrZQ%3D%3D.A0EEb48M2suDR8gRR63JHUJe%2BKZbQRN%2FtvqzbIOI6JIkJCl2K%2FFMXq0J8OhyHjL8wkXwWFIlkVooN8Aq0o26md8oV01p3y%2Fw3i0jIWAfWjrVtSELpDy5dNY28bCl3%2FyRi3w%3D; incap_ses_571_839682=oWQPBQRpKypdFUvZs5nsB3HjIFkAAAAA5iX3xHtMYvyuMxRqfbL9dg==; _gid=GA1.2.1315463210.1495360220; _gat=1; incap_ses_635_839682=LhcwHoCbYi/SDRqtPvnPCNhiIVkAAAAAQeQUZW5ax2kUf9DgTDVRtQ==; "));
         	
 //            System.out.println("Executing request " + httpget.getRequestLine());
-
-            // Create a custom response handler
+        	
+//        	List<NameValuePair> params = new ArrayList<NameValuePair>();
+//        	params.add(new BasicNameValuePair("affiliate_id","mtggoldfish"));
+//        	params.add(new BasicNameValuePair("ref","card,metallic-mimic-aer"));
+//        	params.add(new BasicNameValuePair("utm_campaign","affiliate"));
+//        	params.add(new BasicNameValuePair("utm_medium","card"));
+//        	params.add(new BasicNameValuePair("utm_source","mtggoldfish"));
+            
+        	// Create a custom response handler
             ResponseHandler<String> responseHandler = new ResponseHandler<String>() {
 
                 @Override
                 public String handleResponse(
                         final HttpResponse response) throws ClientProtocolException, IOException {
+//                	Header[] headers = response.getAllHeaders();
+//                	for(Header header : headers){
+//                		System.out.println("in for "+header);
+//                	}
                     int status = response.getStatusLine().getStatusCode();
                     if (status >= 200 && status < 300) {
                         HttpEntity entity = response.getEntity();

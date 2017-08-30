@@ -1,0 +1,13 @@
+select * from cardsprice where name= 'Metallic Mimic' and site = 'cardhoarder' order by id desc
+
+select * from cardsprice where site = 'cardhoarder' order by id desc limit 25
+
+select * from cardsprice where name like 'Gideon%' order by sellprice limit 20
+
+select * from cardsprice where site like 'card%' and name like 'Gideon%' order by id desc limit 25
+
+select * from cardsprice where site like 'mtg%' and name like 'Gideon%' order by id desc limit 30
+
+select * from cardsprice where name like 'Toolcraft%' and site like 'card%' order by id desc  limit 35
+
+select * from cardsprice order by id desc limit 60
