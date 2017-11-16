@@ -23,7 +23,7 @@ public class MtggoldfishFetchTimer {
 					try{
 						CardPrice cp = AnalyzeMtggoldfishCardPriceUtil.fetchCardPrice(url);
 						System.out.println(cp);
-						CardPriceDaoImpl.insertCardPrice(PostgresqlDataBaseManager.getConnection(),cp);
+//						CardPriceDaoImpl.insertCardPrice(PostgresqlDataBaseManager.getConnection(),cp);
 //						CardPriceDaoImpl.insertCardPrice(MysqlDataBaseManager.getConnection(),cp);
 						Thread.sleep(1042);
 					}catch(Exception e){

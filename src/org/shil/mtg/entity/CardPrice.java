@@ -82,7 +82,7 @@ public class CardPrice {
 
 	@Override
 	public String toString() {
-		return "CardPrice [mset=" + mset + ", name=" + name  + ", sellprice=" + sellprice + ", buyprice=" + buyprice
+		return "CardPrice [mset=" + mset + ", name=" + name  + ", \tsellprice=" + sellprice + ", \tbuyprice=" + buyprice
 				 + ", site=" + site + "]";
 	}
 

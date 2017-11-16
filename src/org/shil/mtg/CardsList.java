@@ -5,7 +5,7 @@ public class CardsList {
 	public static String[] getCardhoarderCardsList(){
 		
 		String[] cardslist = {
-				
+
 				//SOI
 				"https://www.cardhoarder.com/cards/59842",
 				"https://www.cardhoarder.com/cards/59920",
@@ -46,6 +46,7 @@ public class CardsList {
 		
 		String[] cardslist = {
 				
+				/*
 				//SOI
 				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Fortified+Village#online",
 				"https://www.mtggoldfish.com/price/Shadows+over+Innistrad/Choked+Estuary#online",
@@ -58,7 +59,9 @@ public class CardsList {
 				//EM
 				"https://www.mtggoldfish.com/price/Eldritch+Moon/Voldaren+Pariah#online",
 				"https://www.mtggoldfish.com/price/Eldritch+Moon/Thalia+Heretic+Cathar#online",
-				
+				left from 2017Sep25
+				*/
+
 				//KLD
 				"https://www.mtggoldfish.com/price/Kaladesh/Inspiring+Vantage#online",
 				"https://www.mtggoldfish.com/price/Kaladesh/Nissa+Vital+Force#online",
@@ -80,9 +83,10 @@ public class CardsList {
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Tezzeret+the+Schemer#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Oath+of+Ajani#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Kari+Zev+Skyship+Raider#online",
-				"https://www.mtggoldfish.com/price/Aether+Revolt/Heroic+Intervention#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Quicksmith+Rebel#online",
 				"https://www.mtggoldfish.com/price/Aether+Revolt/Pias+Revolution#online",
+				"https://www.mtggoldfish.com/price/Aether+Revolt/Aid+from+the+Cowl#online",
+				"https://www.mtggoldfish.com/price/Amonkhet/Bounty+of+the+Luxa#online",
 				
 				//AKH
 				"https://www.mtggoldfish.com/price/Amonkhet/Scattered+Groves",
@@ -91,8 +95,17 @@ public class CardsList {
 				"https://www.mtggoldfish.com/price/Amonkhet/Neheb+the+Worthy#online",
 				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Mirage+Mirror#online",
 				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Samut+the+Tested#online",
-				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Torment+of+Hailfire"
-			};
+				"https://www.mtggoldfish.com/price/Hour+of+Devastation/Torment+of+Hailfire",
+				"https://www.mtggoldfish.com/price/Amonkhet/Kefnet+the+Mindful#online",
+				"https://www.mtggoldfish.com/price/Amonkhet/Combat+Celebrant#online",
+				"https://www.mtggoldfish.com/price/Amonkhet/Rhonas+the+Indomitable#online",
+				"https://www.mtggoldfish.com/price/Amonkhet/Bounty+of+the+Luxa#online",
+				"https://www.mtggoldfish.com/price/Ixalan/Sword-Point+Diplomacy#online",
+				"https://www.mtggoldfish.com/price/Ixalan/Ripjaw+Raptor#online",
+				"https://www.mtggoldfish.com/price/Ixalan/Dreamcaller+Siren#online",
+				"https://www.mtggoldfish.com/price/Ixalan/Kopala+Warden+of+Waves#online",
+				"https://www.mtggoldfish.com/price/Ixalan/Revel+in+Riches#online"
+		};
 		
 		return cardslist;
 	}
